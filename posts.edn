@@ -1,0 +1,4 @@
+{:title "Introducing Pattern"
+ :file "introducing-pattern.md"
+ :categories #{"clojure"}
+ :date "2022-07-13"}

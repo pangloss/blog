@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{title}}</title>
+    <meta charset="utf-8"/>
+    <link type="application/atom+xml" rel="alternate" href="atom.xml" title="REPL Adventures">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/components/prism-clojure.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism.min.css">
+  </head>
+  <body>
+
+    <div class="site-header">
+      <div class="wrapper">
+        <div class="site-nav">
+          <a class="page-link" href="archive.html">Archive</a>
+          <a class="page-link" href="https://github.com/pangloss/blog/discussions/categories/posts">Discuss</a>
+          <a class="page-link" href="atom.xml">
+            Feed
+          </a>
+          <a class="page-link" href="https://twitter.com/darrickwiebe">
+            Twitter
+          </a>
+          <a class="page-link" href="https://no.horse">About</a>
+        </div>
+        <div>
+          <h1 class="site-title">
+            <a class="page-link" href="index.html">No Horse</a>
+          </h1>
+          <p>A blog about the software I write.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrapper">
+
+      {{body | safe }}
+
+      {% if not skip-archive %}
+      <div style="margin-bottom: 20px; float: right;">
+        <a class="page-link" href="archive.html">Archive</a>
+      </div>
+      {% endif %}
+    </div>
+  </body>
+</html>
